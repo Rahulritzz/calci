@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calu.css">
+    <script>
+        function appendValue(value) {
+            let display = document.calculator.display;
+            let current = display.value;
+            let lastChar = current.charAt(current.length - 1);
+
+            // Prevent consecutive operators
+            if (['+', '-', '*','.','/'].includes(lastChar) && ['+', '-', '*','.', '/'].includes(value)) {
+                return;
+            }
+
+            display.value += value;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form name="calculator">
+            <div class="eca">
+                <input type="text" name="display" readonly>
+            </div>
+            <div>
+                <input type="button" value="AC" onclick="calculator.display.value=''" class="col">
+                <input type="button" value="DE" onclick="calculator.display.value=calculator.display.value.toString().slice(0,-1)" class="col">
+                <input type="button" value="." onclick="appendValue('.')" class="col">
+                <input type="button" value="/" onclick="appendValue('/')" class="col">
+            </div>
+            <div>
+                <input type="button" value="7" onclick="appendValue('7')">
+                <input type="button" value="8" onclick="appendValue('8')">
+                <input type="button" value="9" onclick="appendValue('9')">
+                <input type="button" value="*" onclick="appendValue('*')" class="col">
+            </div>
+            <div>
+                <input type="button" value="4" onclick="appendValue('4')">
+                <input type="button" value="5" onclick="appendValue('5')">
+                <input type="button" value="6" onclick="appendValue('6')">
+                <input type="button" value="-" onclick="appendValue('-')" class="col">
+            </div>
+            <div>
+                <input type="button" value="1" onclick="appendValue('1')">
+                <input type="button" value="2" onclick="appendValue('2')">
+                <input type="button" value="3" onclick="appendValue('3')">
+                <input type="button" value="+" onclick="appendValue('+')" class="col">
+            </div>
+            <div>
+                <input type="button" value="00" onclick="appendValue('00')">
+                <input type="button" value="0" onclick="appendValue('0')">
+                <input type="button" value="=" onclick="calculator.display.value=eval(calculator.display.value)" class="equals">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+*{
+box-sizing: border-box;
+font-family: 'Courier New', Courier, monospace;
+margin: 0;
+padding: 0;
+}
+body{
+    background-color: rgb(94, 179, 210);
+}
+.container{
+    margin: 100px auto 10px;
+   min-height: 500px;
+    width: 350px;
+    background-color: rgb(33, 38, 36);
+    
+    border-radius: 4%;
+   
+}
+form input{
+    border: 0;
+    outline: 0;
+    padding: 10px;
+    margin: 10px;
+    height: 60px;
+    width: 60px;
+    background-color:transparent;
+    color: rgb(249, 249, 249);
+    cursor: pointer;
+    box-shadow: 3px 3px 5px #888, -3px -3px 5px #555;
+    font-size: 20px;
+}
+.eca{
+    display: flex;
+    margin-top:10px ;
+
+    justify-content: flex-end;
+    
+}
+.eca input{
+    border: 0;
+    outline: 0;
+    flex:1;
+    text-align: right;
+    font-size: 45px;
+    cursor: auto;
+    box-shadow: none;
+    padding-bottom: -2px;
+}
+.equals{
+    width: 143px;
+    background-color: green;
+}
+.col{
+    background-color: rgb(54, 163, 163);
+}
