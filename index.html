@@ -5,20 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="calu.css">
-    <script>
-        function appendValue(value) {
-            let display = document.calculator.display;
-            let current = display.value;
-            let lastChar = current.charAt(current.length - 1);
-
-            // Prevent consecutive operators
-            if (['+', '-', '*','.','/'].includes(lastChar) && ['+', '-', '*','.', '/'].includes(value)) {
-                return;
-            }
-
-            display.value += value;
-        }
-    </script>
+   <script src="script.js"></script>
 </head>
 <body>
     <div class="container">
